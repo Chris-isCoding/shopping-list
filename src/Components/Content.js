@@ -25,6 +25,7 @@ const Content = () => {
       item.id === id ? { ...item, checked: !item.checked } : item
     );
     setItems(listItems);
+    localStorage.setItem('shoppingList', JSON.stringify(listItems));
   };
 
   return (
@@ -33,11 +34,17 @@ const Content = () => {
         {items.map((item) => (
           <li className='item' key={item.id}>
             <input
+              id={item.id}
               type='checkbox'
               onChange={() => handleCheck(item.id)}
               checked={item.checked}
             />
-            <label>{item.item}</label>
+            <label
+              htmlFor={item.id}
+              style={item.checked ? { textDecoration: 'line-through' } : null}
+            >
+              {item.item}
+            </label>
             <FaTrashAlt role='button' tabIndex='0' />
           </li>
         ))}
