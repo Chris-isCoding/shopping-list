@@ -28,27 +28,41 @@ const Content = () => {
     localStorage.setItem('shoppingList', JSON.stringify(listItems));
   };
 
+  const handleDelete = (id) => {
+    const listItems = items.filter((item) => item.id !== id);
+    setItems(listItems);
+    localStorage.setItem('shoppingList', JSON.stringify(listItems));
+  };
+
   return (
     <main>
-      <ul>
-        {items.map((item) => (
-          <li className='item' key={item.id}>
-            <input
-              id={item.id}
-              type='checkbox'
-              onChange={() => handleCheck(item.id)}
-              checked={item.checked}
-            />
-            <label
-              htmlFor={item.id}
-              style={item.checked ? { textDecoration: 'line-through' } : null}
-            >
-              {item.item}
-            </label>
-            <FaTrashAlt role='button' tabIndex='0' />
-          </li>
-        ))}
-      </ul>
+      {items.length ? (
+        <ul>
+          {items.map((item) => (
+            <li className='item' key={item.id}>
+              <input
+                id={item.id}
+                type='checkbox'
+                onChange={() => handleCheck(item.id)}
+                checked={item.checked}
+              />
+              <label
+                htmlFor={item.id}
+                style={item.checked ? { textDecoration: 'line-through' } : null}
+              >
+                {item.item}
+              </label>
+              <FaTrashAlt
+                role='button'
+                tabIndex='0'
+                onClick={() => handleDelete(item.id)}
+              />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p style={{ marginTop: '2rem' }}> Your list is empty.</p>
+      )}
     </main>
   );
 };
