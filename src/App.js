@@ -25,26 +25,28 @@ function App() {
 
   const [newItem, setNewItem] = useState('');
 
+  const setAndSaveItems = (newItems) => {
+    setItems(newItems);
+    localStorage.setItem('shoppingList', JSON.stringify(newItems));
+  };
+
   const addItem = (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = { id, checked: false, item: item };
     const listItems = [...items, myNewItem];
-    setItems(listItems);
-    localStorage.setItem('shoppingList', JSON.stringify(listItems));
+    setAndSaveItems(listItems);
   };
 
   const handleCheck = (id) => {
     const listItems = items.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
     );
-    setItems(listItems);
-    localStorage.setItem('shoppingList', JSON.stringify(listItems));
+    setAndSaveItems(listItems);
   };
 
   const handleDelete = (id) => {
     const listItems = items.filter((item) => item.id !== id);
-    setItems(listItems);
-    localStorage.setItem('shoppingList', JSON.stringify(listItems));
+    setAndSaveItems(listItems);
   };
 
   const handleSubmit = (e) => {
