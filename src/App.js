@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './Components/Header';
 import AddItem from './Components/AddItem';
 import SearchItem from './Components/SearchItem';
@@ -7,7 +7,7 @@ import Footer from './Components/Footer';
 
 function App() {
   const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem('shoppingList'))
+    JSON.parse(localStorage.getItem('shoppingList')) || []
   );
   const [newItem, setNewItem] = useState('');
   const [search, setSearch] = useState('');
