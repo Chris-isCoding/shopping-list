@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/chris-iscoding.github.io/shopping-list/static/css/main.3b239b70.chunk.css",
+    "main.js": "/chris-iscoding.github.io/shopping-list/static/js/main.2eaf6df9.chunk.js",
+    "main.js.map": "/chris-iscoding.github.io/shopping-list/static/js/main.2eaf6df9.chunk.js.map",
+    "runtime-main.js": "/chris-iscoding.github.io/shopping-list/static/js/runtime-main.ea050119.js",
+    "runtime-main.js.map": "/chris-iscoding.github.io/shopping-list/static/js/runtime-main.ea050119.js.map",
+    "static/js/2.03786080.chunk.js": "/chris-iscoding.github.io/shopping-list/static/js/2.03786080.chunk.js",
+    "static/js/2.03786080.chunk.js.map": "/chris-iscoding.github.io/shopping-list/static/js/2.03786080.chunk.js.map",
+    "index.html": "/chris-iscoding.github.io/shopping-list/index.html",
+    "static/css/main.3b239b70.chunk.css.map": "/chris-iscoding.github.io/shopping-list/static/css/main.3b239b70.chunk.css.map",
+    "static/js/2.03786080.chunk.js.LICENSE.txt": "/chris-iscoding.github.io/shopping-list/static/js/2.03786080.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ea050119.js",
+    "static/js/2.03786080.chunk.js",
+    "static/css/main.3b239b70.chunk.css",
+    "static/js/main.2eaf6df9.chunk.js"
+  ]
+}
