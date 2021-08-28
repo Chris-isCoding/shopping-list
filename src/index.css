@@ -9,6 +9,8 @@ html {
 }
 
 body {
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
   min-height: 100vh;
   font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -17,6 +19,7 @@ body {
 }
 
 .App {
+  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
